@@ -7,8 +7,8 @@ var thirsty = false
 var injured = false
 var poisoned = false
 
-var hungry_rate = 20
-var thirsty_rate = 20
+var hungry_rate = 2
+var thirsty_rate = 2
 var injured_rate = 2
 var poisoned_rate = 2
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/CharacterGroup.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/CharacterDisplay.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Soundtrack/Nomad_Family_Gameplay_Track.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Prefabs/DangerZone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/HealingWaterZone.tscn" type="PackedScene" id=5]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 30, 1, 30 )
@@ -14,20 +15,21 @@ size = Vector3( 60, 2, 60 )
 [node name="Main" type="Node"]
 
 [node name="DangerZone4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0725, 6.34003, -4.64284 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4289, 6.34003, -4.64284 )
 thirst = true
 
 [node name="DangerZone3" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4364, -0.160427, 18.818 )
-poison = true
+thirst = true
 
 [node name="DangerZone2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0347, -0.159893, 14.3052 )
-injury = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5398, -0.159893, 14.3052 )
+thirst = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CharacterDisplay" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3, 5 )
 
 [node name="CharacterDisplay3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3, 406 )
@@ -54,8 +56,11 @@ stream = ExtResource( 3 )
 autoplay = true
 
 [node name="DangerZone" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88601, -0.44477, -13.8127 )
-hunger = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88601, -0.44477, -19.8114 )
 thirst = true
 
 [node name="CharacterGroup" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0211315, 0.0675392, -0.0421066 )
+
+[node name="HealZone" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54622, -0.16037, 16.1154 )

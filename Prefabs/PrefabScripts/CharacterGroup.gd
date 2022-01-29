@@ -6,7 +6,7 @@ export var turn_speed = 0.1
 var velocity = Vector3.ZERO
 var heading = 0.0
 
-var character_array = [$Player1, $Player2, $Player3]
+var character_array = [null, null, null]
 var character_index = -1
 
 func _ready():
@@ -46,3 +46,39 @@ func poison():
 	
 func injury():
 	$Player3.injured = true
+	
+func heal_thirst():
+	print ("HEALING!")
+	for character in character_array:
+		if (character.thirsty):
+			print ("healed")
+			character.health += 25
+			if (character.health > 100):
+				character.health = 100
+			character.thirsty = false
+
+func heal_hunger():
+	for character in character_array:
+		if (character.hunger):
+			character.health += 25
+			if (character.health > 100):
+				character.health = 100
+			character.hunger = false
+
+func heal_poison():
+	for character in character_array:
+		if (character.poison):
+			character.health += 25
+			if (character.health > 100):
+				character.health = 100
+			character.poison = false
+
+func heal_injury():
+	for character in character_array:
+		if (character.injury):
+			character.health += 25
+			if (character.health > 100):
+				character.health = 100
+			character.injury = false
+
+
