@@ -7,6 +7,8 @@ export(Texture) var icon_100
 
 var hp = 100
 
+var my_character
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -14,7 +16,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#get hp
+	if(my_character == null):
+		my_character = get_parent().get_node("CharacterGroup").give_character()
+		print (my_character)
+	hp = my_character.health
+	
 	$CharacterIcon.texture = icon_25
 	if (hp > 25):
 		$CharacterIcon.texture = icon_50
