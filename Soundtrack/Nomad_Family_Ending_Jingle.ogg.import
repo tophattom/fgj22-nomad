@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Nomad_Family_Ending_Jingle.ogg-2090d16fb5f9958821a82aa025eb9835.oggstr"
+
+[deps]
+
+source_file="res://Soundtrack/Nomad_Family_Ending_Jingle.ogg"
+dest_files=[ "res://.import/Nomad_Family_Ending_Jingle.ogg-2090d16fb5f9958821a82aa025eb9835.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
