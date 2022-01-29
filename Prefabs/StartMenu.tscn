@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Sprites/StartMenuBG.png" type="Texture" id=1]
+[ext_resource path="res://Prefabs/StartMenuBG_Chara.png" type="Texture" id=1]
 
 [node name="CanvasModulate" type="CanvasModulate"]
 
-[node name="StartMenuBg" type="Sprite" parent="."]
-position = Vector2( 517, 300 )
-scale = Vector2( 0.564815, 0.564815 )
+[node name="StartMenuBgChara" type="Sprite" parent="."]
+position = Vector2( 510, 300 )
+scale = Vector2( 0.560185, 0.560185 )
 texture = ExtResource( 1 )
