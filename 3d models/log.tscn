@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://3d models/log.fbx" type="PackedScene" id=1]
+[ext_resource path="res://textures/log/log_DefaultMaterial_Normal.png" type="Texture" id=2]
+[ext_resource path="res://textures/log/log_DefaultMaterial_AlbedoTransparency.png" type="Texture" id=3]
+[ext_resource path="res://textures/log/log_DefaultMaterial_SpecularSmoothness.png" type="Texture" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+metallic_specular = 0.01
+metallic_texture = ExtResource( 4 )
+normal_enabled = true
+normal_scale = -10.05
+normal_texture = ExtResource( 2 )
+
+[node name="log" instance=ExtResource( 1 )]
+
+[node name="Cylinder" parent="RootNode" index="0"]
+transform = Transform( 89.1434, 1.62059e-05, -45.3151, 45.3151, -3.18802e-05, 89.1434, 0, -100, -3.57628e-05, 0.295707, -0.159641, 0 )
+material/0 = SubResource( 1 )
