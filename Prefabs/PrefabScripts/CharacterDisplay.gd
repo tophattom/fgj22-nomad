@@ -15,7 +15,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if(my_character == null):
 		my_character = get_parent().get_node("CharacterGroup").give_character()
 		print (my_character)
@@ -28,6 +28,29 @@ func _process(delta):
 		$CharacterIcon.texture = icon_75
 	if (hp > 75):
 		$CharacterIcon.texture = icon_100
+	
+	if (my_character.thirsty):
+		$Thirsty.show()
+	else:
+		$Thirsty.hide()
+		
+	
+	if (my_character.hungry):
+		$Hungry.show()
+	else:
+		$Hungry.hide()
+		
+	
+	if (my_character.poisoned):
+		$Poison.show()
+	else:
+		$Poison.hide()
+		
+	
+	if (my_character.injured):
+		$Injury.show()
+	else:
+		$Injury.hide()
 	
 
 func get_hp():
