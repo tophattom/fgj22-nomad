@@ -328,19 +328,6 @@ material/0 = SubResource( 13 )
 [node name="cattail" parent="A2" instance=ExtResource( 26 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.6232, 1.52588e-05, -79.1145 )
 
-[node name="HealZone2" parent="A2" instance=ExtResource( 5 )]
-transform = Transform( 2.85247, 0, -2.25752, 0, 1, 0, 2.25752, 0, 2.85247, -49.5405, 0, -104.48 )
-
-[node name="HealZone" parent="A2" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, -38.2783, 0, -75.6986 )
-hunger = true
-thirst = false
-
-[node name="HealZone3" parent="A2" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, -21.9345, 0, -77.4567 )
-hunger = true
-thirst = false
-
 [node name="A3" type="Node" parent="."]
 
 [node name="hill-rocky3" parent="A3" instance=ExtResource( 23 )]
@@ -399,46 +386,6 @@ material/0 = SubResource( 17 )
 
 [node name="teltta" parent="B3" instance=ExtResource( 19 )]
 transform = Transform( 4.015, 0, 0, 0, 4.015, 0, 0, 0, 4.015, 19.8812, -1.52588e-05, -40.611 )
-
-[node name="HealZone2" parent="B3" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9022, 0.0284976, -38.323 )
-thirst = false
-injury = true
-
-[node name="HealZone4" parent="B3" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 6.43087, 0, -50.0986 )
-hunger = true
-thirst = false
-
-[node name="HealZone5" parent="B3" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 16.4345, 0, -56.0696 )
-hunger = true
-thirst = false
-
-[node name="HealZone6" parent="B3" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 13.2693, -7.62939e-06, -20.3571 )
-hunger = true
-thirst = false
-
-[node name="HealZone7" parent="B3" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 51.2342, -7.62939e-06, 9.41211 )
-hunger = true
-thirst = false
-
-[node name="HealZone8" parent="B3" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 51.1136, -7.62939e-06, 19.1745 )
-hunger = true
-thirst = false
-
-[node name="HealZone9" parent="B3" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 37.1329, -7.62939e-06, 33.7578 )
-hunger = true
-thirst = false
-
-[node name="HealZone10" parent="B3" instance=ExtResource( 37 )]
-transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 117.642, -7.62939e-06, 7.84531 )
-hunger = true
-thirst = false
 
 [node name="birch tree14" parent="B3" instance=ExtResource( 25 )]
 transform = Transform( -0.329575, 0, 0.944129, 0, 1, 0, -0.944129, 0, -0.329575, 42.0025, -1.52588e-05, -48.3034 )
@@ -628,6 +575,72 @@ transform = Transform( 0.686297, 0, -0.389253, 0, 0.789, 0, 0.389253, 0, 0.68629
 
 [node name="rocks3" parent="D4_ending_area" instance=ExtResource( 16 )]
 transform = Transform( 14.251, 0, 0, 0, 14.251, 0, 0, 0, 14.251, 97.5874, 0, 106.037 )
+
+[node name="Healing area" type="Node" parent="."]
+
+[node name="HealZone2" parent="Healing area" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9022, 0.0284976, -38.323 )
+visible = false
+thirst = false
+injury = true
+
+[node name="HealZone4" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 6.43087, 0, -50.0986 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone5" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 16.4345, 0, -56.0696 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone6" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 13.2693, -7.62939e-06, -20.3571 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone7" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 51.2342, -7.62939e-06, 9.41211 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone8" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 51.1136, -7.62939e-06, 19.1745 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone9" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 37.1329, -7.62939e-06, 33.7578 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone10" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 117.642, -7.62939e-06, 7.84531 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone3" parent="Healing area" instance=ExtResource( 5 )]
+transform = Transform( 2.85247, 0, -2.25752, 0, 1, 0, 2.25752, 0, 2.85247, -49.5405, 0, -104.48 )
+visible = false
+
+[node name="HealZone" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, -38.2783, 0, -75.6986 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone11" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, -21.9345, 0, -77.4567 )
+visible = false
+hunger = true
+thirst = false
 
 [node name="Dangers" type="Node" parent="."]
 
