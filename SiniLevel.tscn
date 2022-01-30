@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://3d models/conifer tree.tscn" type="PackedScene" id=1]
+[ext_resource path="res://3d models/beech tree.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Ground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://3d models/birch tree autum.tscn" type="PackedScene" id=4]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Ground" parent="." instance=ExtResource( 3 )]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.766236, -0.420312, 0.486024, -0.0527258, 0.794966, 0.604359, -0.640392, 0.437456, -0.631293, 124.981, 38.5938, -122.772 )
+light_color = Color( 0.964706, 0.654902, 0, 1 )
+light_energy = 0.583
+shadow_enabled = true
+
+[node name="A1_starting_area" type="Node" parent="."]
+
+[node name="birch tree2" parent="A1_starting_area" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -105.247, -0.354736, -111.472 )
+
+[node name="beech tree" parent="A1_starting_area" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74.069, 0, -105.962 )
+
+[node name="birch tree" parent="A1_starting_area" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -104.429, 0, -90.6234 )
+
+[node name="A2" type="Node" parent="."]
+
+[node name="A3" type="Node" parent="."]
+
+[node name="A4" type="Node" parent="."]
+
+[node name="D4_ending_area" type="Node" parent="."]
+
+[node name="conifer tree" parent="D4_ending_area" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 78.504, 0, 90.861 )
