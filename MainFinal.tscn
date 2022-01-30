@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Prefabs/CharacterGroup.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/CharacterDisplay.tscn" type="PackedScene" id=2]
@@ -32,10 +32,8 @@
 [ext_resource path="res://textures/mushrooms/sienet_DefaultMaterial_SpecularSmoothness.png" type="Texture" id=30]
 [ext_resource path="res://textures/mushrooms/sienet_DefaultMaterial_Normal.png" type="Texture" id=31]
 [ext_resource path="res://textures/berries/marjat_DefaultMaterial_MetallicSmoothness.png" type="Texture" id=32]
-[ext_resource path="res://Sprites/GUI/Parent_0-25.png" type="Texture" id=33]
-[ext_resource path="res://Sprites/GUI/Parent_25-50.png" type="Texture" id=34]
-[ext_resource path="res://Sprites/GUI/Parent_50-75.png" type="Texture" id=35]
-[ext_resource path="res://Sprites/GUI/Parent_75-100.png" type="Texture" id=36]
+[ext_resource path="res://Soundtrack/AMB_Forest (LOOP).ogg" type="AudioStream" id=33]
+[ext_resource path="res://Prefabs/HealingFoodZone.tscn" type="PackedScene" id=37]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 30, 1, 30 )
@@ -204,33 +202,11 @@ normal_texture = ExtResource( 13 )
 [node name="Main" type="Node"]
 script = ExtResource( 12 )
 
-[node name="DangerZone4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4289, 6.34003, -4.64284 )
-hunger = true
-thirst = true
-injury = true
-poison = true
-
-[node name="DangerZone3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4364, -0.160427, 18.818 )
-thirst = true
-
-[node name="DangerZone2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5398, -0.159893, 14.3052 )
-hunger = true
-thirst = true
-injury = true
-poison = true
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CharacterDisplay" parent="." instance=ExtResource( 2 )]
 position = Vector2( 15, 11 )
 scale = Vector2( 1.1, 1.1 )
-icon_25 = ExtResource( 33 )
-icon_50 = ExtResource( 34 )
-icon_75 = ExtResource( 35 )
-icon_100 = ExtResource( 36 )
 
 [node name="CharacterDisplay2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 18, 214 )
@@ -257,6 +233,10 @@ transform = Transform( 1, 0, 0, 0, 0.0419454, 0.99912, 0, -0.99912, 0.0419454, 0
 shadow_enabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 33 )
+autoplay = true
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 autoplay = true
 
@@ -265,7 +245,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88601, -0.44477, -19.8114 )
 thirst = true
 
 [node name="CharacterGroup" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0211315, 0.0675392, -0.0421066 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -112.183, 0.0675392, -86.3433 )
+speed = 8
 SFXthirst = ExtResource( 15 )
 
 [node name="HealZone" parent="." instance=ExtResource( 5 )]
@@ -595,3 +576,107 @@ transform = Transform( 0.686297, 0, -0.389253, 0, 0.789, 0, 0.389253, 0, 0.68629
 
 [node name="rocks3" parent="D4_ending_area" instance=ExtResource( 16 )]
 transform = Transform( 14.251, 0, 0, 0, 14.251, 0, 0, 0, 14.251, 97.5874, 0, 106.037 )
+
+[node name="Healing area" type="Node" parent="."]
+
+[node name="HealZone2" parent="Healing area" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9022, 0.0284976, -38.323 )
+visible = false
+thirst = false
+injury = true
+
+[node name="HealZone4" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 6.43087, 0, -50.0986 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone5" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 16.4345, 0, -56.0696 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone6" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 13.2693, -7.62939e-06, -20.3571 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone7" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 51.2342, -7.62939e-06, 9.41211 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone8" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 51.1136, -7.62939e-06, 19.1745 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone9" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 37.1329, -7.62939e-06, 33.7578 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone10" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, 117.642, -7.62939e-06, 7.84531 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone3" parent="Healing area" instance=ExtResource( 5 )]
+transform = Transform( 2.85247, 0, -2.25752, 0, 1, 0, 2.25752, 0, 2.85247, -49.5405, 0, -104.48 )
+visible = false
+
+[node name="HealZone" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, -38.2783, 0, -75.6986 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="HealZone11" parent="Healing area" instance=ExtResource( 37 )]
+transform = Transform( 0.251884, 0, 0, 0, 1, 0, 0, 0, 0.251884, -21.9345, 0, -77.4567 )
+visible = false
+hunger = true
+thirst = false
+
+[node name="Dangers" type="Node" parent="."]
+
+[node name="hunger" type="Node" parent="Dangers"]
+
+[node name="DangerZone" parent="Dangers/hunger" instance=ExtResource( 4 )]
+transform = Transform( 2.19665, 0, 0, 0, 1, 0, 0, 0, 2.19665, -85.435, 0, -59.0294 )
+hunger = true
+
+[node name="DangerZone2" parent="Dangers/hunger" instance=ExtResource( 4 )]
+transform = Transform( 2.19665, 0, 0, 0, 1, 0, 0, 0, 2.19665, -51.6571, 0, 20.4963 )
+hunger = true
+
+[node name="DangerZone3" parent="Dangers/hunger" instance=ExtResource( 4 )]
+transform = Transform( 2.19665, 0, 0, 0, 1, 0, 0, 0, 2.19665, 72.6326, 0, -16.0691 )
+hunger = true
+
+[node name="thirst" type="Node" parent="Dangers"]
+
+[node name="DangerZone4" parent="Dangers/thirst" instance=ExtResource( 4 )]
+transform = Transform( 2.19665, 0, 0, 0, 1, 0, 0, 0, 2.19665, -36.0447, 0, 74.2003 )
+thirst = true
+
+[node name="injury" type="Node" parent="Dangers"]
+
+[node name="DangerZone5" parent="Dangers/injury" instance=ExtResource( 4 )]
+transform = Transform( 2.19665, 0, 0, 0, 1, 0, 0, 0, 2.19665, -49.8506, 0, -70.2308 )
+injury = true
+
+[node name="poison" type="Node" parent="Dangers"]
+
+[node name="DangerZone6" parent="Dangers/poison" instance=ExtResource( 4 )]
+transform = Transform( 0.320264, 0, 0, 0, 1, 0, 0, 0, 0.320264, -29.4887, 0, -68.8142 )
+poison = true
+
+[node name="DangerZone7" parent="Dangers/poison" instance=ExtResource( 4 )]
+transform = Transform( 0.320264, 0, 0, 0, 1, 0, 0, 0, 0.320264, 44.5956, 0, 13.7048 )
+poison = true
