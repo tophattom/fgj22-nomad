@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://3d models/conifer tree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://3d models/beech tree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Ground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://3d models/birch tree autum.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/hill-rocky.tscn" type="PackedScene" id=6]
+[ext_resource path="res://3d models/pool of water.tscn" type="PackedScene" id=7]
 
 [node name="Spatial" type="Spatial"]
 
@@ -15,22 +18,65 @@ light_color = Color( 0.964706, 0.654902, 0, 1 )
 light_energy = 0.583
 shadow_enabled = true
 
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.68742, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -79.7152, 37.4978, -31.6476 )
+
 [node name="A1_starting_area" type="Node" parent="."]
 
 [node name="birch tree2" parent="A1_starting_area" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -105.247, -0.354736, -111.472 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -105.247, 0, -111.472 )
 
 [node name="beech tree" parent="A1_starting_area" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74.069, 0, -105.962 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -93.4157, 0, -105.962 )
 
 [node name="birch tree" parent="A1_starting_area" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -104.429, 0, -90.6234 )
 
 [node name="A2" type="Node" parent="."]
 
+[node name="beech tree" parent="A2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.923, 0, -90.1073 )
+
+[node name="pool of water" parent="A2" instance=ExtResource( 7 )]
+transform = Transform( 3.14456, 0, -3.0302, 0, 1, 0, 3.0302, 0, 3.14456, -45.493, 0, -109.415 )
+
 [node name="A3" type="Node" parent="."]
 
+[node name="hill-rocky3" parent="A3" instance=ExtResource( 6 )]
+transform = Transform( 15.4788, 0, -23.0175, 0, 27.738, 0, 23.0175, 0, 15.4788, 40.7095, 0, -115.912 )
+
 [node name="A4" type="Node" parent="."]
+
+[node name="B1" type="Node" parent="."]
+
+[node name="hill-rocky" parent="B1" instance=ExtResource( 6 )]
+transform = Transform( 2.21088, 0, -27.1702, 0, 27.26, 0, 27.1702, 0, 2.21088, -75.6034, 0, -7.62049 )
+
+[node name="B2" type="Node" parent="."]
+
+[node name="B3" type="Node" parent="."]
+
+[node name="B4" type="Node" parent="."]
+
+[node name="C1" type="Node" parent="."]
+
+[node name="C2" type="Node" parent="."]
+
+[node name="hill-rocky2" parent="C2" instance=ExtResource( 6 )]
+transform = Transform( 11.7511, 0, -17.4743, 0, 21.058, 0, 17.4743, 0, 11.7511, 5.214, 0, 29.8804 )
+
+[node name="C3" type="Node" parent="."]
+
+[node name="C4" type="Node" parent="."]
+
+[node name="D1" type="Node" parent="."]
+
+[node name="D2" type="Node" parent="."]
+
+[node name="D3" type="Node" parent="."]
 
 [node name="D4_ending_area" type="Node" parent="."]
 
