@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Player_Relief_2.wav-fdf69ace8b75edb4e28e0be7a2c9d18d.sample"
+
+[deps]
+
+source_file="res://PlayerSFX/Player_Relief_2.wav"
+dest_files=[ "res://.import/Player_Relief_2.wav-fdf69ace8b75edb4e28e0be7a2c9d18d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

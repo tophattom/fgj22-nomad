@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Player_Thirst(2).wav-c7d5a8b5bfc7d4d0d0a1b7a0f12f4580.sample"
+
+[deps]
+
+source_file="res://PlayerSFX/Player_Thirst(2).wav"
+dest_files=[ "res://.import/Player_Thirst(2).wav-c7d5a8b5bfc7d4d0d0a1b7a0f12f4580.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

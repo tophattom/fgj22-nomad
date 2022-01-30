@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Player_Footstep_7.wav-473935077394493c953e8548357d2c22.sample"
+
+[deps]
+
+source_file="res://PlayerSFX/Player_Footstep_7.wav"
+dest_files=[ "res://.import/Player_Footstep_7.wav-473935077394493c953e8548357d2c22.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

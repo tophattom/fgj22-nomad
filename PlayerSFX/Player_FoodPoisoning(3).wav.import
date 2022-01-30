@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Player_FoodPoisoning(3).wav-f8321c98a61e3a1a67213764395fd1f4.sample"
+
+[deps]
+
+source_file="res://PlayerSFX/Player_FoodPoisoning(3).wav"
+dest_files=[ "res://.import/Player_FoodPoisoning(3).wav-f8321c98a61e3a1a67213764395fd1f4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
