@@ -1,14 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://3d models/cactus.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/PlayerCharacter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/PrefabScripts/CharacterGroup.gd" type="Script" id=3]
+[ext_resource path="res://PlayerSFX/Player_Relief.wav" type="AudioStream" id=4]
+[ext_resource path="res://PlayerSFX/Player_TwistAnkle.wav" type="AudioStream" id=5]
+[ext_resource path="res://PlayerSFX/Player_FoodPoisoning(2).wav" type="AudioStream" id=6]
+[ext_resource path="res://PlayerSFX/Player_Thirst(2).wav" type="AudioStream" id=7]
+[ext_resource path="res://PlayerSFX/Player_Footsteps_Loop.wav" type="AudioStream" id=8]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.07956, 2.06603, 1.11127 )
 
 [node name="CharacterGroup" type="KinematicBody"]
 script = ExtResource( 3 )
+SFXthirst = ExtResource( 7 )
+SFXpoison = ExtResource( 6 )
+SFXinjury = ExtResource( 5 )
+SFXrelief = ExtResource( 4 )
+SFXsteps = ExtResource( 8 )
 
 [node name="Player1" parent="." instance=ExtResource( 2 )]
 
