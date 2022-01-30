@@ -1,5 +1,7 @@
 extends KinematicBody
 
+var rng = RandomNumberGenerator.new()
+
 export var speed = 5
 export var turn_speed = 0.1
 
@@ -19,6 +21,7 @@ export(AudioStream) var SFXrelief
 export(AudioStream) var SFXsteps
 
 func _ready():
+	rng.randomize()
 	character_array[0] = $Player1
 	#print (character_array[0])
 	character_array[1] = $Player2
@@ -51,22 +54,22 @@ func _physics_process(_delta):
 		
 	
 func thirst():
-	$Player1.thirsty = true
+	character_array[rng.randi_range(0,2)].thirsty = true
 	SFXplayer.set_stream(SFXthirst)
 	SFXplayer.play()
 	
 func hunger():
-	$Player2.hungry = true
+	character_array[rng.randi_range(0,2)].hungry = true
 	SFXplayer.set_stream(SFXhunger)
 	SFXplayer.play()
 	
 func poison():
-	$Player3.poisoned = true
+	character_array[rng.randi_range(0,2)].poisoned = true
 	SFXplayer.set_stream(SFXpoison)
 	SFXplayer.play()
 	
 func injury():
-	$Player3.injured = true
+	character_array[rng.randi_range(0,2)].injured = true
 	SFXplayer.set_stream(SFXinjury)
 	SFXplayer.play()
 	
