@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StartMenuBG.png-8b24924946a0d0b2f0a92dcf74d4095d.stex"
+path="res://.import/StartMenuBG_V3.png-6e5f0927d5607a6e9b458b45187f3974.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/StartMenuBG.png"
-dest_files=[ "res://.import/StartMenuBG.png-8b24924946a0d0b2f0a92dcf74d4095d.stex" ]
+source_file="res://Sprites/GUI/StartMenuBG_V3.png"
+dest_files=[ "res://.import/StartMenuBG_V3.png-6e5f0927d5607a6e9b458b45187f3974.stex" ]
 
 [params]
 

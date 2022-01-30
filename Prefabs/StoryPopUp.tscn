@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Sprites/Box.png" type="Texture" id=1]
-[ext_resource path="res://Prefabs/StatusIcon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ThirdParty/Fonts/MPLUSRounded1c.tres" type="DynamicFont" id=3]
 
 [node name="NinePatchRect" type="NinePatchRect"]
@@ -19,21 +18,16 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 modulate = Color( 0.117647, 0.0901961, 0.0980392, 1 )
 self_modulate = Color( 0.117647, 0.0901961, 0.0980392, 1 )
-margin_left = 4.0
-margin_top = 16.0
+margin_left = 5.0
+margin_top = 5.0
 margin_right = 193.0
 margin_bottom = 76.0
 custom_colors/font_color = Color( 0.117647, 0.0901961, 0.0980392, 1 )
 custom_fonts/font = ExtResource( 3 )
-text = "Oh no!
-Something has happened! Your character is now AFFECTED."
+text = "Your character has encountered something and the story is progressing. Good for you!"
 align = 1
 valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="StatusIcon" parent="." instance=ExtResource( 2 )]
-position = Vector2( 82, -14 )
-scale = Vector2( 0.3, 0.3 )
