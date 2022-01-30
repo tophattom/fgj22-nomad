@@ -246,6 +246,7 @@ thirst = true
 
 [node name="CharacterGroup" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -112.183, 0.0675392, -86.3433 )
+speed = 8
 SFXthirst = ExtResource( 15 )
 
 [node name="HealZone" parent="." instance=ExtResource( 5 )]
