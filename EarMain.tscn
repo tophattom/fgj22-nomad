@@ -1,18 +1,33 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Prefabs/CharacterGroup.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/CharacterDisplay.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Soundtrack/Nomad_Family_Gameplay_Track.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Prefabs/DangerZone.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/HealingWaterZone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://textures/bar.png" type="Texture" id=6]
+[ext_resource path="res://Prefabs/TerrainGenerator.gd" type="Script" id=7]
+[ext_resource path="res://mushroom_herkkutatti.tscn" type="PackedScene" id=8]
+[ext_resource path="res://mushroom_karpassieni.tscn" type="PackedScene" id=9]
+[ext_resource path="res://mushroom_seitikki.tscn" type="PackedScene" id=10]
+[ext_resource path="res://mushroom_suppilovahvero.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/PrefabScripts/SceneMaster.gd" type="Script" id=12]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 30, 1, 30 )
 
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 6 )
+uv1_scale = Vector3( 200, 200, 10 )
+
 [sub_resource type="CubeMesh" id=2]
+material = SubResource( 3 )
 size = Vector3( 60, 2, 60 )
 
+[sub_resource type="Skin" id=4]
+
 [node name="Main" type="Node"]
+script = ExtResource( 12 )
 
 [node name="DangerZone4" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4289, 6.34003, -4.64284 )
@@ -44,7 +59,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.16048, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0 )
 mesh = SubResource( 2 )
+skin = SubResource( 4 )
 material/0 = null
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
@@ -63,4 +80,8 @@ thirst = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0211315, 0.0675392, -0.0421066 )
 
 [node name="HealZone" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54622, -0.16037, 16.1154 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54622, 0.0284976, 16.1154 )
+
+[node name="TerrainGenerator" type="Node" parent="."]
+script = ExtResource( 7 )
+dec_array = [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
