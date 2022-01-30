@@ -1,0 +1,9 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://ThirdParty/Fonts/MPLUSRounded1c-Bold.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 30
+outline_color = Color( 0.819608, 0.27451, 0.0705882, 1 )
+extra_spacing_bottom = 8
+font_data = ExtResource( 1 )
