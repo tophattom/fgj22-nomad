@@ -86,6 +86,7 @@ shader_param/inside = false
 shader_param/add_margins = true
 
 [node name="CharacterDisplay" type="Node2D"]
+position = Vector2( 12, 10 )
 script = ExtResource( 5 )
 icon_25 = ExtResource( 7 )
 icon_50 = ExtResource( 8 )
@@ -94,6 +95,7 @@ icon_100 = ExtResource( 4 )
 
 [node name="CharacterIcon" type="TextureRect" parent="."]
 material = SubResource( 2 )
+use_parent_material = true
 margin_right = 1340.0
 margin_bottom = 1240.0
 rect_scale = Vector2( 0.1, 0.1 )
@@ -105,25 +107,24 @@ __meta__ = {
 }
 
 [node name="HealthBar" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1, 133 )
-scale = Vector2( 1.2, 1 )
+position = Vector2( 7, 133 )
 
 [node name="Thirsty" parent="." instance=ExtResource( 2 )]
-position = Vector2( 14, 171 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 10, 153 )
+scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 11 )
 
 [node name="Hungry" parent="." instance=ExtResource( 2 )]
-position = Vector2( 46, 172 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 42, 154 )
+scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 12 )
 
 [node name="Injury" parent="." instance=ExtResource( 2 )]
-position = Vector2( 77, 172 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 73, 154 )
+scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 10 )
 
 [node name="Poison" parent="." instance=ExtResource( 2 )]
-position = Vector2( 108, 171 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 104, 153 )
+scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 9 )
