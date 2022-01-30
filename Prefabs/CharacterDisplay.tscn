@@ -3,11 +3,11 @@
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/StatusIcon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/HealthBar.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprites/GUI/Kid_75-100.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/Parent_75-100.png" type="Texture" id=4]
 [ext_resource path="res://Prefabs/PrefabScripts/CharacterDisplay.gd" type="Script" id=5]
-[ext_resource path="res://Sprites/GUI/Kid_50-75.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/GUI/Kid_0-25.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/GUI/Kid_25-50.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/GUI/Parent_50-75.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/GUI/Parent_25-50.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/GUI/Parent_0-25.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/GUI/Poison.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/GUI/Injury.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/GUI/Thirst.png" type="Texture" id=11]
@@ -88,8 +88,8 @@ shader_param/add_margins = true
 [node name="CharacterDisplay" type="Node2D"]
 position = Vector2( 12, 10 )
 script = ExtResource( 5 )
-icon_25 = ExtResource( 7 )
-icon_50 = ExtResource( 8 )
+icon_25 = ExtResource( 8 )
+icon_50 = ExtResource( 7 )
 icon_75 = ExtResource( 6 )
 icon_100 = ExtResource( 4 )
 
