@@ -87,32 +87,32 @@ func heal_thirst():
 
 func heal_hunger():
 	for character in character_array:
-		if (character.hunger):
+		if (character.hungry):
 			SFXplayer.set_stream(SFXrelief)
 			SFXplayer.play()
 			character.health += 25
 			if (character.health > 100):
 				character.health = 100
-			character.hunger = false
+			character.hungry = false
 
 func heal_poison():
 	for character in character_array:
-		if (character.poison):
+		if (character.poisoned):
 			SFXplayer.set_stream(SFXrelief)
 			SFXplayer.play()
 			character.health += 25
 			if (character.health > 100):
 				character.health = 100
-			character.poison = false
+			character.poisoned = false
 
 func heal_injury():
 	for character in character_array:
-		if (character.injury):
+		if (character.injured):
 			SFXplayer.set_stream(SFXrelief)
 			SFXplayer.play()
 			character.health += 25
 			if (character.health > 100):
 				character.health = 100
-			character.injury = false
+			character.injured = false
 
 
