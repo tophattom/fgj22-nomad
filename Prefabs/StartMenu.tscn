@@ -1,6 +1,44 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/GUI/StartMenuBG_V3.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/GUI/PlayButton.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/GUI/CreditsButton_Hover.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/GUI/CreditsButton.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/PlayButton_Hover.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/GUI/PlayButton_Pressed.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/GUI/CreditsButton_Pressed.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 500, 135 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 500, 135 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 500, 135 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 500, 135 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 500, 135 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 500, 135 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 500, 135 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 500, 135 )
 
 [node name="StartScreen" type="Control"]
 anchor_right = 1.0
@@ -22,6 +60,32 @@ size_flags_vertical = 3
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 423.0
+margin_top = 363.0
+margin_right = 710.0
+margin_bottom = 442.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 423.0
+margin_top = 449.0
+margin_right = 710.0
+margin_bottom = 528.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/disabled = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
