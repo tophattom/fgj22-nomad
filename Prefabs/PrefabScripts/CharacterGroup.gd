@@ -42,7 +42,12 @@ func _physics_process(_delta):
 		heading += turn_speed
 
 	var dir = Vector3(cos(heading), 0, sin(heading)).normalized()
-	$Pivot.look_at(translation + dir, Vector3.UP)
+	#$Pivot.look_at(translation + dir, Vector3.UP)
+	
+	if (dir.z > -0.5):
+		$CharacterSprite.play("down")
+	else:
+		$CharacterSprite.play("up")
 	
 	if Input.is_action_pressed("move_forward"):
 		if(!footstep_player.playing):
@@ -51,6 +56,7 @@ func _physics_process(_delta):
 		velocity = move_and_slide(velocity, Vector3.UP)
 	else:
 		footstep_player.stop()
+		$CharacterSprite.stop()
 		
 	
 func thirst():
